@@ -1,0 +1,6 @@
+# Local only: build output, drafts, and editor settings
+dist/
+mockups/
+old-version/
+.claude/
+images/bike-cage.png

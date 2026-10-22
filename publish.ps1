@@ -17,7 +17,9 @@ $files = @(
   "style.css",
   "script.js",
   "James-Fartro-Resume.pdf",
-  "images\avatar.svg"
+  "images\avatar.svg",
+  "robots.txt",
+  "sitemap.xml"
 )
 
 if (Test-Path $dist) { Remove-Item $dist -Recurse -Force }

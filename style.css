@@ -43,6 +43,8 @@ section p + p { margin-top: 8px; }
 .list { list-style: none; }
 .list li { padding: 7px 0; color: var(--muted); }
 .list b { display: block; font-weight: 500; color: var(--text); }
+.list a b { color: var(--c); }
+.list a:hover b::after { content: " ↗"; }
 
 .hl { color: var(--c); }
 

@@ -17,7 +17,13 @@ $files = @(
   "style.css",
   "script.js",
   "James-Fartro-Resume.pdf",
-  "images\avatar.svg",
+  "404.html",
+  "favicon.ico",
+  "fonts\ibm-plex-sans.woff2",
+  "fonts\pixelify-sans.woff2",
+  "images\share.png",
+  "images\icon-192.png",
+  "images\apple-touch-icon.png",
   "robots.txt",
   "sitemap.xml"
 )

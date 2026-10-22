@@ -14,7 +14,7 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { background: var(--sky-bottom); }
-body { background: linear-gradient(var(--sky-top), var(--sky-bottom) 70%) fixed; color: var(--text); font: 17px/1.7 "IBM Plex Sans", system-ui, sans-serif; min-height: 100vh; }
+body { background: linear-gradient(var(--sky-top), var(--sky-bottom) 70%) fixed; color: var(--text); font: 17px/1.7 "IBM Plex Sans", system-ui, sans-serif; font-variant-ligatures: none; min-height: 100vh; }
 a { color: var(--diamond); text-decoration: none; }
 a:hover { text-decoration: underline; }
 ::selection { background: var(--emerald); color: #000; }

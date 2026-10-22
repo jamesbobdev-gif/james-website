@@ -9,4 +9,4 @@ Plain HTML, CSS and JavaScript, with no build step.
 - `script.js`: the rain animation and the footer year
 - `publish.ps1`: optional deploy to Cloudflare Pages
 
-Hosted with GitHub Pages from the `main` branch.
+Hosted with GitHub Pages from the `main` branch at https://jamesfartro.com.

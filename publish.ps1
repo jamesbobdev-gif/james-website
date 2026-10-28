@@ -14,6 +14,7 @@ $dist = Join-Path $root "dist"
 $files = @(
   "index.html",
   "resume.html",
+  "projects\index.html",
   "style.css",
   "script.js",
   "James-Fartro-Resume.pdf",

@@ -1,4 +1,5 @@
-document.getElementById('year').textContent = new Date().getFullYear();
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
 // Minecraft-style rain: drawn on a small canvas and scaled up so every drop is chunky pixels.
 const rain = document.getElementById('rain');

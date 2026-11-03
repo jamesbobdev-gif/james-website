@@ -3,32 +3,34 @@
 @font-face { font-family: "Pixelify Sans"; font-style: normal; font-weight: 500 600; font-display: swap; src: url(fonts/pixelify-sans.woff2) format("woff2"); }
 
 :root {
-  --sky-top: #0d1220;
-  --sky-bottom: #06070b;
-  --text: #dcdfe6;
-  --muted: #8b91a1;
-  /* Minecraft ore colors */
-  --diamond: #4aedd9;
-  --emerald: #17dd62;
-  --gold: #fcdb4b;
-  --redstone: #ff4b4b;
-  --lapis: #6e8cff;
+  --sky-top: #0f0a2a;
+  --sky-mid: #2c1150;
+  --sky-bottom: #a02a6a;
+  --text: #f4effc;
+  --muted: #cbbfe6;
+  /* neon takes on the Minecraft ore colors */
+  --diamond: #3ef0ff;
+  --emerald: #7dff6a;
+  --gold: #ffe14d;
+  --redstone: #ff5c7a;
+  --lapis: #8fa2ff;
+  --neon-pink: #ff2e88;
   --pixel: "Pixelify Sans", "VT323", monospace;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { background: var(--sky-bottom); }
-body { background: linear-gradient(var(--sky-top), var(--sky-bottom) 70%) fixed; color: var(--text); font: 17px/1.7 "IBM Plex Sans", system-ui, sans-serif; font-variant-ligatures: none; min-height: 100vh; }
+html { background: var(--sky-top); }
+body { background: linear-gradient(var(--sky-top), var(--sky-mid) 55%, var(--sky-bottom)) fixed; color: var(--text); font: 17px/1.7 "IBM Plex Sans", system-ui, sans-serif; font-variant-ligatures: none; min-height: 100vh; }
 a { color: var(--diamond); text-decoration: none; }
 a:hover { text-decoration: underline; }
-::selection { background: var(--emerald); color: #000; }
+::selection { background: var(--neon-pink); color: #fff; }
 
-/* Rain canvas sits behind everything */
+/* Skyline canvas sits behind everything */
 #rain { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; image-rendering: pixelated; }
-.page { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; padding: 96px 24px 64px; }
+.page { position: relative; z-index: 1; max-width: 620px; margin: 0 auto; padding: 96px 24px 160px; }
 
-.name { font-family: var(--pixel); font-weight: 600; font-size: clamp(40px, 8vw, 58px); line-height: 1; color: #fff; text-shadow: 4px 4px 0 #2a2f3d; }
-.cursor { color: var(--emerald); text-shadow: none; animation: blink 1s steps(1) infinite; }
+.name { font-family: var(--pixel); font-weight: 600; font-size: clamp(40px, 8vw, 58px); line-height: 1; color: #fff; text-shadow: 4px 4px 0 var(--neon-pink); }
+.cursor { color: var(--diamond); text-shadow: 4px 4px 0 var(--neon-pink); animation: blink 1s steps(1) infinite; }
 @keyframes blink { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .cursor { animation: none; } }
 .lead { margin-top: 20px; font-size: 20px; }
@@ -52,16 +54,16 @@ section p + p { margin-top: 8px; }
 .points { margin: 10px 0 0; padding-left: 20px; color: var(--muted); }
 .points li { margin: 3px 0; }
 .points li::marker { color: var(--c); }
-section > .meta { font-size: 14px; color: var(--c); opacity: .85; margin-top: 10px; }
+section > .meta { font-size: 14px; color: var(--c); margin-top: 10px; }
 .all-projects { margin-top: 22px; }
 
 .project + .project { margin-top: 26px; }
 .project h3 { font-family: var(--pixel); font-weight: 500; font-size: 19px; color: var(--text); margin-bottom: 2px; }
 .project p { color: var(--muted); }
-.project .meta { font-size: 14px; color: var(--c); opacity: .85; margin-top: 4px; }
-.gh { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 15px; color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 45%, transparent); border-radius: 4px; padding: 5px 12px; }
+.project .meta { font-size: 14px; color: var(--c); margin-top: 4px; }
+.gh { display: inline-flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 15px; color: var(--c); background: rgba(15, 10, 42, .55); border: 1px solid color-mix(in srgb, var(--c) 60%, transparent); border-radius: 4px; padding: 5px 12px; }
 .gh svg { width: 16px; height: 16px; fill: currentColor; }
-.gh:hover { text-decoration: none; background: color-mix(in srgb, var(--c) 14%, transparent); }
+.gh:hover { text-decoration: none; background: rgba(15, 10, 42, .85); }
 
 .hl { color: var(--c); }
 
